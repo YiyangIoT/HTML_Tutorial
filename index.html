@@ -6,7 +6,12 @@
         function getData() {
             fetch('https://jsonplaceholder.typicode.com/todos/1')
                 .then(response => response.json())
-                .then(json => document.getElementById("info").innerText = JSON.stringify(json))
+                .then(json => {
+                    console.log(json);
+                    var title = json["title"];
+                    if(title)
+                        document.getElementById("info").innerText = title;
+                })
         }
 
     </script>
