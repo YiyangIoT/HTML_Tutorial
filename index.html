@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <script>
+        function getData() {
+            fetch('https://jsonplaceholder.typicode.com/todos/1')
+                .then(response => response.json())
+                .then(json => document.getElementById("info").innerText = JSON.stringify(json))
+        }
+
+    </script>
+</head>
+
 <body>
 
-    <script>
-        function displayDate() {
-            document.getElementById("demo").innerHTML = Date();
-        }
+    <button onclick="getData()">Send an HTTP GET request to get the result back</button>
+    <p id="info">...</p>
 
-        function setUpdate(){
-            setInterval(displayDate,1000);
-
-        }
-    </script>
-    <button type="button" onclick="setUpdate()">Current Time</button>
-    <p id="demo">...</p>
 </body>
 
 </html>
