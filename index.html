@@ -4,12 +4,12 @@
 <body>
 
     <script>
-       var msg = "Hello" + " World";
-       document.write(msg);
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
     </script>
-     <noscript>
-            抱歉，你的瀏覽器不支持JavaScript !
-     </noscript>
+    <button type="button" onclick="displayDate()">Current Time</button>
+    <p id="demo">...</p>
 </body>
 
 </html>
