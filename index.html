@@ -7,8 +7,13 @@
         function displayDate() {
             document.getElementById("demo").innerHTML = Date();
         }
+
+        function setUpdate(){
+            setInterval(displayDate,1000);
+
+        }
     </script>
-    <button type="button" onclick="displayDate()">Current Time</button>
+    <button type="button" onclick="setUpdate()">Current Time</button>
     <p id="demo">...</p>
 </body>
 
